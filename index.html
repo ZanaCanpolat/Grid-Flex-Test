@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*
+            Flexbox is a layout method for arranging items in rows or columns. Flexbox consists of 
+                - Flex Container the parent <div> element
+                - Flex Items inside the container <div>
+            */
+
+            /*
+            Class NoWrapFlex creates an flex container that never wraps items, it uses the row direction and never wraps
+            */
+            .flex-container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                /*flex-wrap: wrap;*/
+                background-color: rgba(0, 0, 255, 0.675);
+            }
+
+            .flex-container > div {
+                background-color: #f1f1f1;
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            /*
+            CSS properties to change the direction of the items is ".flex-direction"
+            */
+            .flexDirection-container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                background-color: rgba(0, 0, 255, 0.675); 
+
+            }
+
+            .flexDirection-container > div {
+                background-color: #f1f1f1;
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                font-size: 16px;
+            }
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Flexible boxes that never wraps row direction</h1>
+        <p>No matter how much you resize the window the "flex-wrap: nowrap" will not allow it to wrap</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+        <br><br>
+        <h1>Flexible boxes that never wraps column direction</h1>
+        <p>No matter how much you resize the window the "flex-wrap: nowrap" will not allow it to wrap, column direction</p>
+        <div class="flexDirection-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+
+    </body>
+
+
+</html>
